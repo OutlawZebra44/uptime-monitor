@@ -16,3 +16,9 @@ def collect_system_metrics() -> SystemMetric:
         memory_percent=memory_percent,
         disk_percent=disk_percent
     )
+
+
+
+if __name__ == "__main__":
+    metrics = collect_system_metrics()
+    print(f"[{metrics.timestamp}] CPU: {metrics.cpu_percent}% | RAM: {metrics.memory_percent}% | Disk: {metrics.disk_percent}%")
